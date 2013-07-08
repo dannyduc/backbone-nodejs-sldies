@@ -14,8 +14,9 @@ require.config({
     }
 });
 
-require(['backbone'], function (Backbone) {
-    'use strict';
-    console.log(Backbone);
-
+require(['models/slide', 'views/slide'], function (SlideModel, SlideView) {
+    var slide = new SlideModel({ title: 'My First Slide' });
+    var slideView = new SlideView({ model: slide });
+    slideView.render();
+    console.log(slideView.el);
 });
