@@ -57,6 +57,7 @@ define(['backbone'], function (Backbone) {
             var self = this;
             $.get(snippetPath, function(snippet) {
                 self.$el
+//                    .append(heading)
                     .append('<pre class="prettyprint">' + _.escape(snippet) +'</pre>');
 
                 prettyPrint();
