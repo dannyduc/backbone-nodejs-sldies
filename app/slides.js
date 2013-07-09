@@ -5,8 +5,10 @@ window.slides = [
         snippet: 'snippets/ex1.css'
     },
     {
-        title: 'Self Executing Function',
-        snippet: 'snippets/ex1.js'
+        snippet: {
+            'CSS': 'snippets/ex1.css',
+            'JavaScript': 'snippets/ex1.js'
+        }
     },
     {
         quote: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',

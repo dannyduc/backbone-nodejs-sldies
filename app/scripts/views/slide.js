@@ -44,7 +44,18 @@ define(['backbone'], function (Backbone) {
                 this.renderHeading();
             }
 
-            $.get(snippet, function(snippet) {
+            if ($.isPlainObject(snippet)) {
+                return _.each(snippet, function(snippetPath, heading) {
+                    self.setSnippet(snippetPath, heading)
+                });
+            }
+
+            self.setSnippet(snippet);
+        },
+
+        setSnippet: function(snippetPath, heading) {
+            var self = this;
+            $.get(snippetPath, function(snippet) {
                 self.$el
                     .append('<pre class="prettyprint">' + _.escape(snippet) +'</pre>');
 
