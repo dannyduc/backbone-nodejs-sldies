@@ -1,5 +1,5 @@
 window.slides = [
-    { title: 'My Presentiation' },
+    { title: 'My Presentation' },
     {
         title: 'Some CSS Code Here',
         snippet: 'snippets/ex1.css'
